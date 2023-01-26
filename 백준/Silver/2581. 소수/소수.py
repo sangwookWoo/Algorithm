@@ -12,6 +12,7 @@ for i in range(a, b + 1):
                 break
     if cnt == 1:
         list_.append(i)
+        
 if len(list_) == 0:
     print(-1)
 else :
