@@ -8,7 +8,3 @@ def solution(k, tangerine):
         answer += 1
         if total >= k:
             return answer
-        
-        
-
-    return answer
