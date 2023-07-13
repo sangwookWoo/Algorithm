@@ -1,18 +1,18 @@
 from itertools import permutations
 
-def pmts(iterator):
-    words = [] 
-    for iter in range(1,5):
-        for i in permutations(iterator, iter):
-            words.append(''.join(list(i)))
-    return words
-    
 def solution(babbling):
-    canprn = pmts(["aya", "ye", "woo", "ma"])
+    answer = []
     
-    count = 0 
-    for word in babbling:
-        if word in canprn:
-            count += 1
-    return count
-            
+    pronun = ["aya", "ye", "woo", "ma"]
+    for i in range(1, len(pronun) + 1):
+        res = list(permutations(pronun, i))
+        for x in res:
+            abc = ''.join(x)
+            answer.append(abc)
+    
+    cnt = 0
+    for i in babbling:
+        if i in answer:
+            cnt += 1
+    
+    return cnt
