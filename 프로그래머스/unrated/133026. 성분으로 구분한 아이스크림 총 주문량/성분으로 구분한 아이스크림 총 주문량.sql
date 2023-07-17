@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT INGREDIENT_TYPE, SUM(TOTAL_ORDER) AS TOTAL_ORDER
+FROM first_half AS F
+INNER JOIN icecream_info AS I
+ON F.flavor = I.flavor
+GROUP BY I.INGREDIENT_TYPE;
+# ORDER BY count(*) * TOTAL_ORDER;
